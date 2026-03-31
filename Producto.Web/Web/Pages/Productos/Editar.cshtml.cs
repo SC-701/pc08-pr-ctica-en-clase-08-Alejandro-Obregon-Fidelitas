@@ -1,5 +1,6 @@
 using Abstracciones.Interfaces.Reglas;
 using Abstracciones.Modelos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Web.Pages.Productos
 {
+    [Authorize]
     public class EditarModel : PageModel
     {
         private readonly IConfiguracion _configuracion;
@@ -34,7 +36,7 @@ namespace Web.Pages.Productos
                 return NotFound();
             }
             string endpoint = _configuracion.ObtenerMetodo("ApiEndPoints", "ObtenerProducto");
-            var cliente = new HttpClient();
+            var cliente = ObtenerClienteConToken();
             var solicitud = new HttpRequestMessage(HttpMethod.Get, string.Format(endpoint, id));
 
             var respuesta = await cliente.SendAsync(solicitud);
@@ -70,7 +72,7 @@ namespace Web.Pages.Productos
                 return Page();
             }
             string endpoint = _configuracion.ObtenerMetodo("ApiEndPoints", "EditarProducto");
-            var cliente = new HttpClient();
+            var cliente = ObtenerClienteConToken();
             var respuesta = await cliente.PutAsJsonAsync<ProductoRequest>(string.Format(endpoint, productoResponse.Id), new ProductoRequest
             { 
                 IdSubCategoria = subcategoriaseleccionada,
@@ -87,7 +89,7 @@ namespace Web.Pages.Productos
         private async Task ObtenerCategorias()
         {
             string endpoint = _configuracion.ObtenerMetodo("ApiEndPoints", "ObtenerCategorias");
-            var cliente = new HttpClient();
+            var cliente = ObtenerClienteConToken();
             var solicitud = new HttpRequestMessage(HttpMethod.Get, endpoint);
 
             var respuesta = await cliente.SendAsync(solicitud);
@@ -108,7 +110,7 @@ namespace Web.Pages.Productos
         private async Task<List<Subcategoria>> ObtenerSubcategorias(Guid categoriaId)
         {
             string endpoint = _configuracion.ObtenerMetodo("ApiEndPoints", "ObtenerSubcategorias");
-            var cliente = new HttpClient();
+            var cliente = ObtenerClienteConToken();
             var solicitud = new HttpRequestMessage(HttpMethod.Get, string.Format(endpoint, categoriaId));
 
             var respuesta = await cliente.SendAsync(solicitud);
@@ -127,6 +129,17 @@ namespace Web.Pages.Productos
         {
             var subcategorias = await ObtenerSubcategorias(categoriaID);
             return new JsonResult(subcategorias);
+        }
+        private HttpClient ObtenerClienteConToken()
+        {
+            var tokenClaim = HttpContext.User.Claims
+                .FirstOrDefault(c => c.Type == "Token");
+            var cliente = new HttpClient();
+            if (tokenClaim != null)
+                cliente.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue(
+                        "Bearer", tokenClaim.Value);
+            return cliente;
         }
     }
 }
