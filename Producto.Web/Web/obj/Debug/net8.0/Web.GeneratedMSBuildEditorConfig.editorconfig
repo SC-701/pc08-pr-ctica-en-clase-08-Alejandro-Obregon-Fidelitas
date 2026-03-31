@@ -52,6 +52,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/aleaj/Downloads/pc08-pr-ctica-en-clase-08-Alejandro-Obregon-Fidelitas/Producto.Web/Web/Pages/Seguridad/AccesoDenegado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VndXJpZGFkXEFjY2Vzb0RlbmVnYWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aleaj/Downloads/pc08-pr-ctica-en-clase-08-Alejandro-Obregon-Fidelitas/Producto.Web/Web/Pages/Seguridad/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VndXJpZGFkXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aleaj/Downloads/pc08-pr-ctica-en-clase-08-Alejandro-Obregon-Fidelitas/Producto.Web/Web/Pages/Seguridad/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VndXJpZGFkXExvZ291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aleaj/Downloads/pc08-pr-ctica-en-clase-08-Alejandro-Obregon-Fidelitas/Producto.Web/Web/Pages/Seguridad/Registro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VndXJpZGFkXFJlZ2lzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aleaj/Downloads/pc08-pr-ctica-en-clase-08-Alejandro-Obregon-Fidelitas/Producto.Web/Web/Pages/Shared/_AutenticacionParcial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BdXRlbnRpY2FjaW9uUGFyY2lhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/aleaj/Downloads/pc08-pr-ctica-en-clase-08-Alejandro-Obregon-Fidelitas/Producto.Web/Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

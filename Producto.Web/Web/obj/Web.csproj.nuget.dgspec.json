@@ -128,6 +128,10 @@
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
               "version": "[10.0.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.17.0, )"
             }
           },
           "imports": [
@@ -203,6 +207,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Autorizacion.Abstracciones.Alejandro-Obregon-Fidelitas": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Autorizacion.DA.Alejandro-Obregon-Fidelitas": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Autorizacion.Flujo.Alejandro-Obregon-Fidelitas": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Autorizacion.Middleware.Alejandro-Obregon-Fidelitas": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.17.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
