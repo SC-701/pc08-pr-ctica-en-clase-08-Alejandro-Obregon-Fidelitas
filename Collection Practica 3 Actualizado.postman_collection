@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "8e0c18ab-eca7-4b50-8902-926e81688cf9",
+		"name": "Collection Practica 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51912464",
+		"_collection_link": "https://alejandro-obregon-fidelitas-6486582.postman.co/workspace/Alejandro-Obregon's-Workspace~245c2f6a-abdb-4bfc-857f-0b818313fb86/collection/51912464-8e0c18ab-eca7-4b50-8902-926e81688cf9?action=share&source=collection_link&creator=51912464"
+	},
+	"item": [
+		{
+			"name": "Obtener Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7267/api/Producto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7267/api/Producto/6fd9650c-d5b7-4022-b087-342570a7a763",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Producto",
+						"6fd9650c-d5b7-4022-b087-342570a7a763"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Leche\",\r\n  \"descripcion\": \"de vaca\",\r\n  \"precio\": 1000,\r\n  \"stock\": 10,\r\n  \"codigoBarras\": \"Prueba\",\r\n  \"idSubCategoria\": \"f1d81001-edd3-49e1-ab04-75fd954ac483\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Producto/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Producto",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Leche\",\r\n    \"descripcion\": \"De Cabra\",\r\n    \"precio\": 2000,\r\n    \"stock\": 20,\r\n    \"codigoBarras\": \"Prueba2\",\r\n    \"idSubCategoria\": \"f1d81001-edd3-49e1-ab04-75fd954ac483\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Producto/9d5a7867-63f8-47ab-97a5-ee81c4380e73",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Producto",
+						"9d5a7867-63f8-47ab-97a5-ee81c4380e73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7267/api/Producto/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Producto",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Tipo de Cambio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJCQ0NSLVNEREUiLCJzdWIiOiJhb2JyZWdvbjAwNDQ1QHVmaWRlLmFjLmNyIiwiYXVkIjoiU0RERS1TaXRpb0V4dGVybm8iLCJleHAiOjI1MzQwMjMwMDgwMCwibmJmIjoxNzcwODU5NDIyLCJpYXQiOjE3NzA4NTk0MjIsImp0aSI6IjdkNWYwNjE5LTRkNDEtNDY5ZS1iNmNkLTQ0YWU4ZmJmMmZhMiIsImVtYWlsIjoiYW9icmVnb24wMDQ0NUB1ZmlkZS5hYy5jciJ9.yR4u91m6M002E_L1dOoRMGsg3cvzaQzuXcvAfUTXcUo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apim.bccr.fi.cr/SDDE/api/Bccr.GE.SDDE.Publico.Indicadores.API/cuadro/491/series?fechaInicio=2026/02/08&fechaFin=2026/02/11&idioma=ES",
+					"protocol": "https",
+					"host": [
+						"apim",
+						"bccr",
+						"fi",
+						"cr"
+					],
+					"path": [
+						"SDDE",
+						"api",
+						"Bccr.GE.SDDE.Publico.Indicadores.API",
+						"cuadro",
+						"491",
+						"series"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "2026/02/08"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2026/02/11"
+						},
+						{
+							"key": "idioma",
+							"value": "ES"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

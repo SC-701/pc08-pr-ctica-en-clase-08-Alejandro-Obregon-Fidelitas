@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "VDpqniOVI8Y=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aleaj\\Downloads\\pc08-pr-ctica-en-clase-08-Alejandro-Obregon-Fidelitas\\Producto.Web\\Web\\Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleaj\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.2\\microsoft.extensions.configuration.10.0.2.nupkg.sha512",
+    "C:\\Users\\aleaj\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.2\\microsoft.extensions.configuration.abstractions.10.0.2.nupkg.sha512",
+    "C:\\Users\\aleaj\\.nuget\\packages\\microsoft.extensions.configuration.binder\\10.0.2\\microsoft.extensions.configuration.binder.10.0.2.nupkg.sha512",
+    "C:\\Users\\aleaj\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.2\\microsoft.extensions.primitives.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
