@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autorizacion.Abstracciones.Alejandro-Obregon-Fidelitas" Version="1.0.0" />
+    <PackageReference Include="Autorizacion.DA.Alejandro-Obregon-Fidelitas" Version="1.0.0" />
+    <PackageReference Include="Autorizacion.Flujo.Alejandro-Obregon-Fidelitas" Version="1.0.0" />
+    <PackageReference Include="Autorizacion.Middleware.Alejandro-Obregon-Fidelitas" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
