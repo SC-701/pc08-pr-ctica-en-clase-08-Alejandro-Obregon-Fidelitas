@@ -43,8 +43,6 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
-
 app.UseAuthentication();    // ★ lee la cookie → llena HttpContext.User
 app.AutorizacionClaims();   // ★ agrega claims de rol desde BD de seguridad
 app.UseAuthorization();     // ★ verifica [Authorize]
